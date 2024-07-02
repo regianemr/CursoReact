@@ -39,8 +39,6 @@ function App() {
         </h2>
         {/* 6 - css modulos */}
         <Title />
-
-        
       </div>
       
   )
