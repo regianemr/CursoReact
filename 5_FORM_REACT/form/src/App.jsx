@@ -6,7 +6,7 @@ function App() {
   
       <div className='App'>
         <h1>Form em React</h1>
-        <MyForm />
+        <MyForm userName="Regiane" userEmail="regiane@gmail" />
       </div>
   )
 }
