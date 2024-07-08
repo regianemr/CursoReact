@@ -11,7 +11,7 @@ function App() {
   const [products, setProducts] = useState([])
 
   // 4 - custom hook
-  const { data: items } = useFetch(url)
+  const { data: items, httpConfig, loading } = useFetch(url)
   // useEffect(() => {
     
   //   async function getData() {
@@ -34,27 +34,34 @@ function App() {
 
     const product = {
       name,
-      price
+      price,
     }
     
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(product),
-    })
+    // 5 - refatorando post
+    httpConfig(product, "POST")
 
-    // 3 - carregamento dinâmico
-    const addedProduct = await res.json()
+    
+    
+    // const res = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json"
+    //   },
+    //   body: JSON.stringify(product),
+    // })
 
-    setProducts((prevProducts) => [...prevProducts, addedProduct])
+    // // 3 - carregamento dinâmico
+    // const addedProduct = await res.json()
+
+    // setProducts((prevProducts) => [...prevProducts, addedProduct])
 
   }
 
   return (
       <div className='App'>
        <h1>HTTP em React</h1>
+       {/* 6 - loading  */}
+       {loading && <p>Carregando..</p>}
        {/* 1 - Resgate de dados */}
        <ul>
         {items && items.map((product) => (

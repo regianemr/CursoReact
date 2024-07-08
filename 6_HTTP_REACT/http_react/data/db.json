@@ -39,6 +39,11 @@
       "name": "testando carregamento din�mico",
       "price": "558",
       "id": 8
+    },
+    {
+      "name": "teste post",
+      "price": "20",
+      "id": 9
     }
   ]
 }
