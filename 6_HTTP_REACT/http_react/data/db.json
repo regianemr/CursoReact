@@ -29,6 +29,16 @@
       "name": "teste 3",
       "price": "3",
       "id": 6
+    },
+    {
+      "name": "testando carregamento dinâmico",
+      "price": "558",
+      "id": 7
+    },
+    {
+      "name": "testando carregamento din�mico",
+      "price": "558",
+      "id": 8
     }
   ]
 }
