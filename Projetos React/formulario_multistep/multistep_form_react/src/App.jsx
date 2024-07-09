@@ -22,7 +22,7 @@ function App() {
   const { currentStep, currentComponent, changesStep, isLastStep, isFirstStep } = useForm(formComponents)
 
   return (
-   <div className="App">
+   <div className="app">
       <div className="header">
         <h2>Deixe sua avaliação</h2>
         <p>
