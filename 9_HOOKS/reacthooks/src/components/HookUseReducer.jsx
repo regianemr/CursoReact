@@ -3,6 +3,7 @@ import { useReducer, useState } from "react"
 const HookUseReducer = () => {
 
     // 1 - começando com o useReducer
+    // eslint-disable-next-line no-unused-vars
     const [number, dispatch] = useReducer((state, action) => {
         return Math.random(state)
     })
@@ -16,15 +17,15 @@ const HookUseReducer = () => {
     const taskReducer = (state, action) => {
         switch(action.type) {
             case "ADD":
-                const newTask = {
+                { const newTask = {
                     id: Math.random(),
                     text: taskText,
                 }
 
                 setTaskText("")
 
-                return [...state, newTask]
-            
+                return [...state, newTask] }
+                
             case "DELETE":
                 return state.filter((task) => task.id !== action.id)
             
